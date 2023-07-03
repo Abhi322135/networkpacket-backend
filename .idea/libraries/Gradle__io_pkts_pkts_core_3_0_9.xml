@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.pkts:pkts-core:3.0.9">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.pkts/pkts-core/3.0.9/a407b19130577826f241007e8a34d604ba05420a/pkts-core-3.0.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.pkts/pkts-core/3.0.9/4653b96686c15425418a4470cc8ba8824ff6c3b/pkts-core-3.0.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
