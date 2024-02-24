@@ -10,7 +10,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -25,12 +24,12 @@ import java.util.List;
             List<Role> roleList=user.getRole();
             if(roleList.contains(Role.ADMIN))
             {
-                roles = Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN"));
+                roles = List.of(new SimpleGrantedAuthority("ROLE_ADMIN"));
                 return new User(user.getUsername(), user.getPassword(),roles);
             }
             else if(roleList.contains(Role.USER))
             {
-                roles = Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
+                roles = List.of(new SimpleGrantedAuthority("ROLE_USER"));
                 return new User(user.getUsername(), user.getPassword(),roles);
             }
             throw new UsernameNotFoundException("User not found with username: " + userName);

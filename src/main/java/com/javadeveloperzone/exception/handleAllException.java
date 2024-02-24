@@ -15,6 +15,6 @@ public class handleAllException {
     public ResponseEntity<?> handleRuntimeException(RuntimeException e, WebRequest request)
     {
         ErrorHandling error=new ErrorHandling(new Date(), e.getMessage(), request.getDescription(false));
-        return new ResponseEntity(error, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
 }
