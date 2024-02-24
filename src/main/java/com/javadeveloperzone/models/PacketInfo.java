@@ -1,6 +1,7 @@
 package com.javadeveloperzone.models;
 
 
+import com.google.gson.Gson;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -102,5 +103,11 @@ public class PacketInfo {
 
     public void setLength(int length) {
         this.length = length;
+    }
+
+    @Override
+    public String toString() {
+        Gson gson = new Gson();
+        return gson.toJson(this);
     }
 }
