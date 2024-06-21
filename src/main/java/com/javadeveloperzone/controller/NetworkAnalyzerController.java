@@ -30,7 +30,8 @@ public class NetworkAnalyzerController {
     @PostMapping ("/start/{key}")
     public ResponseEntity<?> startNetworkDevice(@PathVariable int key, HttpServletRequest request) throws NotOpenException, PcapNativeException, IOException {
         String jwtToken= networkAnalyzerService.resumeThread(request);
-        return ResponseEntity.ok( networkAnalyzerService.save(key,jwtToken));
+         networkAnalyzerService.save(key,jwtToken);
+         return ResponseEntity.ok("Network device started");
     }
 
     @Secured("ROLE_ADMIN")
