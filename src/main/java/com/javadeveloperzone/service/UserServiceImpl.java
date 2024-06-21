@@ -23,16 +23,20 @@ import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+    private final JwtTokenUtil jwtTokenUtil;
+    private final AuthenticationManager authenticationManager;
+    private final UserAuthentication userAuthentication;
     @Autowired
-    private UserRepository userRepository;
-    @Autowired
-    PasswordEncoder passwordEncoder;
-    @Autowired
-    JwtTokenUtil jwtTokenUtil;
-    @Autowired
-    private AuthenticationManager authenticationManager;
-    @Autowired
-    private UserAuthentication userAuthentication;
+    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder, JwtTokenUtil jwtTokenUtil, AuthenticationManager authenticationManager, UserAuthentication userAuthentication) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+        this.jwtTokenUtil = jwtTokenUtil;
+        this.authenticationManager = authenticationManager;
+        this.userAuthentication = userAuthentication;
+    }
+
     @Override
     public User createUser(User user) {
         DateTimeFormatter dateTimeFormatter=DateTimeFormatter.ofPattern("dd/MM/uuuu").withResolverStyle(ResolverStyle.STRICT);

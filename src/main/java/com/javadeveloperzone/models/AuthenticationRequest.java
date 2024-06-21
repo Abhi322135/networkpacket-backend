@@ -1,11 +1,8 @@
 package com.javadeveloperzone.models;
 
-import java.io.Serializable;
-
-public class AuthenticationRequest implements Serializable {
+public class AuthenticationRequest  {
     private String username;
     private String password;
-    private static final long serialVersionUID = 5926468583005150707L;
 
     public AuthenticationRequest(String username, String password) {
         this.username = username;

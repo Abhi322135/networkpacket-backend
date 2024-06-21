@@ -52,7 +52,7 @@ public class NetworkAnalyzerServiceImpl implements NetworkAnalyzerService {
     }
     @Override
     @Async("AsyncExecution")
-    public CompletableFuture<String> save(int key,String token) throws NotOpenException, PcapNativeException {
+    public CompletableFuture<String> save(int key, String token) throws NotOpenException, PcapNativeException {
         List<PcapNetworkInterface> listOfDevices = Pcaps.findAllDevs();
         PcapNetworkInterface device=selectDevice(key,listOfDevices);
         if (device == null) {

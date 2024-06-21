@@ -30,7 +30,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().authorizeRequests().antMatchers("/user/creation").permitAll()
+        http.authorizeRequests().antMatchers("/user/creation").permitAll()
                 .antMatchers("/authenticate/user").permitAll()
                 .antMatchers("/network/analyse/number/of/packets/between/dates").permitAll()
                 .anyRequest().authenticated()

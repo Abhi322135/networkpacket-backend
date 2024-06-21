@@ -15,7 +15,7 @@ public interface NetworkAnalyzerService {
 
     List <NetworkDeviceList> getDeviceList() throws IOException, PcapNativeException;
 
-   CompletableFuture<String> save(int key,String token) throws IOException, NotOpenException, PcapNativeException;
+    CompletableFuture<String> save(int key, String token) throws IOException, NotOpenException, PcapNativeException;
 
     String stop(HttpServletRequest request) throws NotOpenException, PcapNativeException, IOException, InterruptedException;
    List<PacketInfo> findAll();
