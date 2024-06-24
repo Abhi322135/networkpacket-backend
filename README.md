@@ -8,11 +8,7 @@ This project is a backend application for a network capture sniffer, built using
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Overview
 
